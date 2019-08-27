@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="d-flex bd-highlight">
+        <a href="/clucks" class="mr-auto mx-3">
+            <img src="/images/cluck.png" alt="cluck" style="width: 70px;height:70px">
+        </a>
+        <a href="/clucks/new_cluck" class="btn btn-secondary btn-lg mx-3 my-3 bd-highlight ">Cluck!</a>
+        <% if(username){%>
+        <h3 class="mx-3 my-4 text-muted"><%= username%></h3>
+        <form action="/clucks/sign_out" method="POST">
+            <input type="submit" value="Sign Out" class="btn btn-secondary btn-lg mx-3 my-3 bd-highlight ">
+        </form>
+        <%} else{%>
+        <a href="/clucks/login" class="btn btn-secondary btn-lg mx-3 my-3 bd-highlight ">Sign In</a>
+        <%}%>
+    </div>
+    <div class="dropdown-divider"></div>
