@@ -1,0 +1,16 @@
+<%- include("../partials/header.ejs")%>
+
+<form class="container border border-black-50 rounded mt-4 p-4" action="/clucks/new_cluck" method="POST">
+    <div class="form-group">
+        <label for="content" class="text-black-50">Content</label>
+        <textarea class="form-control" name="content" rows="3" placeholder="What choo cluckin about"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="image_url" class="text-black-50">Image Url</label>
+        <input type="text" class="form-control" name="image_url" placeholder="https://www.example.com/some.png">
+    </div>
+    <div class="d-flex flex-row-reverse">
+        <button type="submit" class="btn btn-light btn-lg text-black-50" style="width: 40%">Cluck!</button>
+    </div>
+</form>
+<%- include("../partials/footer.ejs")%>
